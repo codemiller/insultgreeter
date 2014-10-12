@@ -1,0 +1,3 @@
+#!/bin/bash
+cd $OPENSHIFT_REPO_DIR
+mysql $OPENSHIFT_APP_NAME < src/main/resources/import.sql
