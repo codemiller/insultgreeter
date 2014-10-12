@@ -16,8 +16,8 @@
 --
 drop table if exists Users;
 drop table if exists Insult;
-create table Users (id int(50) not null auto_increment primary key, username varchar(35) unique, firstName varchar(35), lastName varchar(35)); 
-create table Insult (id int(50) not null auto_increment primary key, firstAdjective varchar(35), secondAdjective varchar(35), noun varchar(35));
+create table Users (id serial primary key, username varchar unique, firstName varchar, lastName varchar); 
+create table Insult (id serial primary key, firstAdjective varchar, secondAdjective varchar, noun varchar);
 
 insert into Users (id, username, firstName, lastName) values (-1, 'katie', 'Katie', 'Miller');
 insert into Users (id, username, firstName, lastName) values (-2, 'joe', 'Joe', 'Bloggs');
@@ -72,3 +72,5 @@ insert into Insult (id, firstAdjective, secondAdjective, noun) values (-47, 'war
 insert into Insult (id, firstAdjective, secondAdjective, noun) values (-48, 'wayward', 'toad-spotted', 'vassal');
 insert into Insult (id, firstAdjective, secondAdjective, noun) values (-49, 'weedy', 'unchin-snouted', 'whey-face');
 insert into Insult (id, firstAdjective, secondAdjective, noun) values (-50, 'yeasty', 'weather-bitten', 'wagtail');
+
+
